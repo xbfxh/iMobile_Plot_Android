@@ -599,7 +599,12 @@ public class MainActivity extends Activity implements OnClickListener, OnTouchLi
 		if(mMap != null){
 			
 			mMap.close();
-			mWorkspace.save();
+			try {
+				mWorkspace.save();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			mWorkspace.close();
 			mMap.dispose();
 			mMapControl.dispose();

@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.PopupWindow;
 
+import java.util.ArrayList;
+
 import com.supermap.data.Geometry;
 import com.supermap.mapping.Action;
 import com.supermap.mapping.GeometrySelectedEvent;
@@ -123,6 +125,12 @@ public class EditPopup extends PopupWindow {
 				deleteDialog.create().show();       // 点击删除按钮后，再选中对象，直接弹出删除及时
 				isDeleteClicked = false;
 			}
+		}
+
+		@Override
+		public void geometryMultiSelected(ArrayList<GeometrySelectedEvent> arg0) {
+			// TODO Auto-generated method stub
+			
 		}
 	};
 	
